@@ -112,20 +112,4 @@ class ExceptionWatcher
 			return isset($this->defaultOptions[$name]) ? $this->defaultOptions[$name] : null;
 		}
 	}
-
-	public function throwException() {
-		throw new Exception("gaga");
-	}
 }
-
-$watcher = ExceptionWatcher::getInstance();
-$watcher->startWatching(array(
-	'smtp_host' => "tls://smtp.gmail.com",
-	'smtp_port' => 465,
-	'smtp_username' => "YOU-NAME@gmail.com",
-	'smtp_password' => "YOU-PASSWORD"
-));
-$adfs['test'] = "jhaa";
-throw new ExceptionNotifier();
-$watcher->throwException();
-
